@@ -282,14 +282,11 @@
       flex-direction: column;
       align-items: center;
       border: 2px solid var(--gold-primary);
-      width: 100%;
     }
     
     .app-logo-container {
       position: relative;
       margin-bottom: 20px;
-      display: flex;
-      justify-content: center;
     }
     
     .app-logo {
@@ -305,8 +302,7 @@
     .app-logo-bg {
       position: absolute;
       top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: -12px;
       width: 154px;
       height: 154px;
       background: radial-gradient(circle, var(--gold-light), var(--gold-primary));
@@ -321,8 +317,6 @@
       font-weight: 800;
       color: var(--gold-light);
       margin-bottom: 8px;
-      text-align: center;
-      width: 100%;
     }
     
     .app-description {
@@ -330,8 +324,6 @@
       margin-bottom: 25px;
       line-height: 1.7;
       font-size: 15px;
-      text-align: center;
-      width: 100%;
     }
     
     .app-meta {
@@ -340,7 +332,6 @@
       gap: 15px;
       margin-bottom: 20px;
       flex-wrap: wrap;
-      width: 100%;
     }
     
     .meta-item {
@@ -370,14 +361,11 @@
       color: var(--text-gray);
     }
     
-    /* زر التحميل */
+    /* زر التحميل - تم التعديل هنا */
     .download-box {
       width: 100%;
       max-width: 380px;
       margin: 15px auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     
     .file-box {
@@ -394,8 +382,6 @@
       overflow: hidden;
       border: 2px solid #FFD700;
       font-weight: 700;
-      width: 100%;
-      justify-content: center;
     }
     
     .file-box:hover {
@@ -428,7 +414,7 @@
     .file-box .text {
       display: flex;
       flex-direction: column;
-      text-align: center;
+      text-align: right;
       flex: 1;
     }
     
@@ -465,7 +451,6 @@
       box-shadow: 0 3px 8px rgba(0,0,0,0.3);
       display: none;
       border: 2px solid var(--gold-primary);
-      width: 100%;
     }
     
     /* زر التنزيل النهائي */
@@ -530,7 +515,6 @@
       margin-bottom: 25px;
       position: relative;
       padding-bottom: 12px;
-      width: 100%;
     }
     
     .section-title::after {
@@ -573,7 +557,7 @@
       height: 45px;
       min-width: 45px;
       border-radius: 10px;
-      background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary);
+      background: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary));
       display: flex;
       align-items: center;
       justify-content: center;
@@ -697,166 +681,20 @@
       margin-right: auto;
     }
     
-    /* === إعلانات أدسنس === */
-    
-    /* إعلان الرأس */
-    .ads-header {
-      margin: 20px auto 30px;
-      max-width: 728px;
-      padding: 0 15px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    /* الرسوم المتحركة */
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
     }
     
-    .ads-label {
-      font-size: 12px;
-      color: var(--text-gray);
-      margin-bottom: 8px;
-      display: block;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-align: center;
-      width: 100%;
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
     }
     
-    /* إعلان الشريط الجانبي */
-    .ads-sidebar {
-      margin: 25px auto;
-      text-align: center;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 300px;
-    }
-    
-    /* إعلان داخل المحتوى */
-    .ads-inline {
-      margin: 30px auto;
-      max-width: 600px;
-      text-align: center;
-      padding: 15px;
-      background: rgba(30, 30, 30, 0.5);
-      border-radius: 12px;
-      border: 1px solid rgba(212, 175, 55, 0.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-    }
-    
-    /* إعلان الفوتر */
-    .ads-footer {
-      margin: 30px auto 0;
-      max-width: 728px;
-      text-align: center;
-      padding: 0 15px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    /* إعلان موبايل */
-    .ads-mobile {
-      display: none;
-      margin: 20px auto;
-      text-align: center;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 320px;
-    }
-    
-    /* حاوية الإعلان */
-    .ad-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 90px;
-      background: rgba(40, 40, 40, 0.3);
-      border-radius: 8px;
-      overflow: hidden;
-      width: 100%;
-    }
-    
-    .ad-container ins {
-      margin: 0 auto !important;
-      display: block !important;
-    }
-    
-    .ad-placeholder {
-      width: 100%;
-      padding: 20px;
-      color: var(--text-gray);
-      font-size: 14px;
-      text-align: center;
-      background: rgba(50, 50, 50, 0.3);
-      border: 2px dashed rgba(212, 175, 55, 0.3);
-      border-radius: 8px;
-    }
-    
-    /* محاذاة خاصة للإعلانات داخل app-card */
-    .app-card .ads-inline,
-    .app-card .ads-mobile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-    
-    .app-card .ad-container {
-      display: flex;
-      justify-content: center;
-    }
-    
-    /* تحسينات الإعلان للجوال */
-    @media (max-width: 768px) {
-      .ads-header {
-        max-width: 320px;
-      }
-      
-      .ads-footer {
-        max-width: 320px;
-      }
-      
-      .ads-mobile {
-        display: flex;
-      }
-      
-      .ads-inline {
-        max-width: 320px;
-      }
-      
-      .ads-sidebar {
-        max-width: 300px;
-        margin: 20px auto;
-      }
-      
-      .ad-placeholder {
-        padding: 15px;
-        font-size: 12px;
-      }
-      
-      /* محاذاة الإعلانات في الجوال */
-      .app-card .ads-inline {
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      .app-card .ads-mobile {
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-    
+    /* تحسينات للجوال */
     @media (max-width: 480px) {
       h1 {
         font-size: 24px;
@@ -870,7 +708,6 @@
       .app-logo-bg {
         width: 134px;
         height: 134px;
-        top: -10px;
       }
       
       .app-title {
@@ -905,79 +742,6 @@
       .footer-desc {
         font-size: 14px;
       }
-      
-      .ads-header,
-      .ads-footer,
-      .ads-inline {
-        max-width: 300px;
-        padding: 0 10px;
-      }
-      
-      .ads-mobile {
-        max-width: 300px;
-      }
-      
-      /* تحسين عرض file-box في الجوال */
-      .file-box {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 15px;
-      }
-      
-      .file-box img {
-        width: 45px;
-        height: 45px;
-        margin-right: 10px;
-      }
-      
-      .file-box .text {
-        text-align: right;
-        flex: 1;
-      }
-    }
-    
-    /* تحسينات إضافية للجوال الصغير */
-    @media (max-width: 360px) {
-      .file-box {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      .file-box img {
-        margin: 0 auto 10px;
-        margin-right: 0;
-      }
-      
-      .file-box .text {
-        text-align: center;
-      }
-      
-      .app-meta {
-        gap: 10px;
-      }
-      
-      .meta-item {
-        min-width: 70px;
-        padding: 8px;
-      }
-      
-      .ads-inline,
-      .ads-mobile {
-        max-width: 280px;
-      }
-    }
-    
-    /* الرسوم المتحركة */
-    @keyframes pulse {
-      0% { transform: scale(0.95); opacity: 0.8; }
-      50% { transform: scale(1); opacity: 1; }
-      100% { transform: scale(0.95); opacity: 0.8; }
-    }
-    
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-      100% { transform: translateY(0px); }
     }
     
     /* تأثيرات إضافية */
@@ -999,37 +763,113 @@
       z-index: 10;
     }
     
-    /* ضبط عام للمحاذاة */
-    .text-center {
-      text-align: center !important;
-    }
-    
-    .mx-auto {
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
-    
-    .d-flex {
-      display: flex !important;
-    }
-    
-    .justify-center {
-      justify-content: center !important;
-    }
-    
-    .align-center {
-      align-items: center !important;
-    }
-    
-    /* تصحيح خاص لأدسنس */
-    ins[data-ad-status="filled"] {
-      margin: 0 auto !important;
-    }
-    
-    /* جعل كل محتوى app-card في المنتصف */
-    .app-card > * {
-      align-self: center;
-    }
+    /* === إعلانات أدسنس - نسخة مبسطة === */
+
+/* إعلان الرأس */
+.ads-header {
+  margin: 20px auto 30px;
+  max-width: 728px;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.ads-label {
+  font-size: 12px;
+  color: var(--text-gray);
+  margin-bottom: 8px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* إعلان داخل المحتوى */
+.ads-inline {
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: center;
+  padding: 15px;
+  background: rgba(30, 30, 30, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* إعلان الفوتر */
+.ads-footer {
+  margin: 30px auto 0;
+  max-width: 728px;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* إعلان موبايل */
+.ads-mobile {
+  display: none;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* حاوية الإعلان */
+.ad-container {
+  display: block;
+  text-align: center;
+  min-height: 90px;
+  background: rgba(40, 40, 40, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* تحسينات للجوال */
+@media (max-width: 768px) {
+  .ads-header {
+    max-width: 320px;
+  }
+  
+  .ads-footer {
+    max-width: 320px;
+  }
+  
+  .ads-mobile {
+    display: block;
+    max-width: 320px;
+  }
+  
+  .ads-inline {
+    max-width: 320px;
+  }
+  
+  /* طريقة بسيطة لمركزة الإعلانات */
+  .ad-container {
+    text-align: center;
+  }
+  
+  .ad-container ins {
+    display: inline-block !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .ads-header,
+  .ads-footer,
+  .ads-inline {
+    max-width: 300px;
+  }
+  
+  .ads-mobile {
+    max-width: 300px;
+  }
+}
+
+/* الحل الأكيد لمركزة إعلانات أدسنس */
+.ad-container {
+  text-align: center;
+}
+
+.ad-container ins {
+  display: inline-block !important;
+  margin: 0 auto !important;
+  text-align: center;
+}
   </style>
 </head>
 
@@ -1375,22 +1215,32 @@
           console.log('Error loading ads:', e);
         }
       }, 2000);
+      
+      // إصلاح محاذاة الإعلانات بعد التحميل
+      setTimeout(fixAdAlignment, 2500);
     });
 
     let lang = 'ar';
     function setLanguage(selectedLang) {
       lang = selectedLang;
+      
+      // تحديث كل العناصر بلغة واحدة
       document.querySelectorAll('[data-lang]').forEach(el => {
-        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+        el.style.display = el.dataset.lang === lang ? 'inline-block' : 'none';
       });
+      
+      // تحديث direction و lang للصفحة
       document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
       document.documentElement.lang = lang;
       
-      // تحديث تسميات الإعلانات حسب اللغة
+      // تحديث تسميات الإعلانات
+      updateAdLabels();
+    }
+    
+    // دالة لتحديث تسميات الإعلانات
+    function updateAdLabels() {
       document.querySelectorAll('.ads-label').forEach(label => {
-        const arLabel = label.getAttribute('data-lang') === 'ar';
-        const enLabel = label.getAttribute('data-lang') === 'en';
-        label.style.display = (lang === 'ar' && arLabel) || (lang === 'en' && enLabel) ? 'block' : 'none';
+        label.style.display = label.getAttribute('data-lang') === lang ? 'block' : 'none';
       });
     }
 
@@ -1419,32 +1269,97 @@
       }, 1000);
     }
     
-    // اكتشاف حجم الشاشة لتحسين الإعلانات
-    function detectScreenSize() {
+    // دالة لإصلاح محاذاة إعلانات أدسنس
+    function fixAdAlignment() {
       const isMobile = window.innerWidth <= 768;
-      const mobileAds = document.querySelector('.ads-mobile');
-      const headerAd = document.querySelector('.ads-header .ad-container ins');
-      const footerAd = document.querySelector('.ads-footer .ad-container ins');
       
+      // إصلاح محاذاة جميع الإعلانات
+      document.querySelectorAll('.ad-container ins').forEach(ad => {
+        // تطبيق الأنماط الأساسية
+        ad.style.margin = '0 auto';
+        ad.style.display = 'block';
+        ad.style.textAlign = 'center';
+        
+        // تعديل الحجم للجوال
+        if (isMobile) {
+          const container = ad.closest('.ad-container');
+          if (container) {
+            // تحديد حجم الإعلان بناءً على مكانه
+            if (container.closest('.ads-header') || container.closest('.ads-footer')) {
+              ad.style.width = '320px';
+              ad.style.height = '50px';
+            } else if (container.closest('.ads-inline')) {
+              ad.style.width = '300px';
+              ad.style.height = '250px';
+            } else if (container.closest('.ads-mobile')) {
+              ad.style.width = '320px';
+              ad.style.height = '50px';
+            }
+          }
+        }
+      });
+      
+      // التحكم في عرض إعلان الجوال
+      const mobileAds = document.querySelector('.ads-mobile');
+      if (mobileAds) {
+        mobileAds.style.display = isMobile ? 'block' : 'none';
+      }
+      
+      // إضافة padding إضافي للإعلانات على الجوال لتحسين المحاذاة
       if (isMobile) {
-        // تحويل إعلانات الرأس والفوتر إلى حجم موبايل
-        if (headerAd) {
-          headerAd.style.width = '320px';
-          headerAd.style.height = '50px';
-        }
-        if (footerAd) {
-          footerAd.style.width = '320px';
-          footerAd.style.height = '50px';
-        }
-        if (mobileAds) {
-          mobileAds.style.display = 'block';
-        }
+        document.querySelectorAll('.ads-inline, .ads-header, .ads-footer').forEach(adContainer => {
+          adContainer.style.padding = '0 10px';
+        });
       }
     }
     
-    // تشغيل اكتشاف حجم الشاشة عند التحميل والتكبير
-    window.addEventListener('load', detectScreenSize);
+    // دالة لاكتشاف حجم الشاشة
+    function detectScreenSize() {
+      fixAdAlignment(); // نستدعي نفس الدالة
+    }
+    
+    // تشغيل الدوال عند الأحداث
+    window.addEventListener('load', () => {
+      // تأخير بسيط لضمان تحميل الإعلانات
+      setTimeout(fixAdAlignment, 1000);
+    });
+    
     window.addEventListener('resize', detectScreenSize);
+    
+    // تشغيل إضافي بعد 3 ثوان للتأكد
+    setTimeout(fixAdAlignment, 3000);
+    
+    // حل خاص لمشكلة محاذاة أدسنس النهائي
+    function finalAdFix() {
+      // إعادة تطبيق الأنماط بعد فترة للتأكد
+      document.querySelectorAll('.ad-container').forEach(container => {
+        container.style.textAlign = 'center';
+        
+        const ad = container.querySelector('ins');
+        if (ad) {
+          ad.style.margin = '0 auto';
+          ad.style.display = 'block';
+          
+          // إذا كان الإعلان محملاً بالفعل
+          if (ad.offsetHeight > 0) {
+            // مركزة الإعلان داخل الحاوية
+            const containerWidth = container.offsetWidth;
+            const adWidth = ad.offsetWidth;
+            
+            if (adWidth > 0) {
+              const marginLeft = (containerWidth - adWidth) / 2;
+              ad.style.marginLeft = `${marginLeft}px`;
+              ad.style.marginRight = `${marginLeft}px`;
+            }
+          }
+        }
+      });
+    }
+    
+    // تشغيل الحل النهائي عدة مرات للتأكد
+    [4000, 6000, 10000].forEach(time => {
+      setTimeout(finalAdFix, time);
+    });
   </script>
 </body>
 </html>
