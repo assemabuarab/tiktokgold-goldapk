@@ -89,21 +89,24 @@
     /* شاشة التحميل */
     #loader {
       position: fixed;
-      inset: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: var(--dark-bg);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       z-index: 9999;
-      transition: opacity 0.5s ease;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
     }
     
     .loader-content {
       text-align: center;
       padding: 30px;
       border-radius: 16px;
-      background: rgba(30, 30, 30, 0.9);
+      background: rgba(30, 30, 30, 0.95);
       box-shadow: var(--shadow);
       border: 2px solid var(--gold-primary);
     }
@@ -250,7 +253,7 @@
     /* المحتوى الرئيسي */
     .main-content {
       max-width: 1200px;
-      margin: -40px auto 30px;
+      margin: 30px auto;
       padding: 0 15px;
       position: relative;
       z-index: 5;
